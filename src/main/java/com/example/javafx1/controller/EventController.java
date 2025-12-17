@@ -35,7 +35,7 @@ public class EventController {
 
     private void loadEvents() {
         List<Event> events = eventService.getAllEvents();
-        System.out.println("Events found: " + events.size()); // Add this line
+        System.out.println("Events found: " + events.size());
         for(Event e : events) System.out.println(e);
 
         eventTable.setItems(FXCollections.observableArrayList(
@@ -80,7 +80,6 @@ public class EventController {
     @FXML
     private void saveEvent() {
         if (selectedEventForUpdate == null) {
-            // Logic for NEW event (Old addEvent logic)
             Event event = new Event(0, titleField.getText(), locationField.getText(), datePicker.getValue());
             eventService.addEvent(event);
         } else {
