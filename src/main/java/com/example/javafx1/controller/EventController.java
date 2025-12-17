@@ -62,7 +62,7 @@ public class EventController {
             {
                 updateBtn.setOnAction(event -> {
                     selectedEventForUpdate = getTableView().getItems().get(getIndex());
-                    // Fill the fields with existing data
+                    // kat3mar les input b data likayna ela wad l update
                     titleField.setText(selectedEventForUpdate.getTitle());
                     locationField.setText(selectedEventForUpdate.getLocation());
                     datePicker.setValue(selectedEventForUpdate.getEventDate());
